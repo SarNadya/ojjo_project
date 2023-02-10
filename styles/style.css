@@ -157,7 +157,6 @@ body {
   font-family: Gilroy;
   font-size: 18px;
   margin: 0 auto;
-  /* margin-left: 38%; */
   background: #333333;
   text-align: center;
 }
@@ -274,6 +273,50 @@ body {
   border: 1px solid #D6D6D6;
 } */
 
+/* ------SALONS------------------------------------------- */
+
+.salons {
+  background: url(../images/double-bubble-dark.png) no-repeat center;
+}
+
+.salons__container {
+  padding: 100px 0;
+}
+
+.salons__header {
+  text-align: center;
+}
+
+.salons__subtitle {
+  font-size: 21px;
+  padding-bottom: 15px;
+}
+
+.salons__title {
+  font-family: 'Noto Serif';
+  font-size: 30px;
+  padding-bottom: 45px;
+}
+
+.salons__article {
+  text-align: center;
+  font-size: 18px;
+  width: 66%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.salons__link {
+  display: block;
+  width: 224px;
+  color: #333333;
+  border: #333333 1px solid;
+  padding: 15px 0;
+  font-size: 18px;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center;
+}
 
 
 /* ------FOOTER------------------------------------------- */
