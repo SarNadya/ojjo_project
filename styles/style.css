@@ -185,18 +185,18 @@ body {
   padding: 100px 0 120px 0;
 }
 
-.catalog__header {
+.__header {
   text-align: center;
   color: #333333;
 }
 
-.catalog__link {
+.link {
   font-size: 21px;
   color: #333333;;
   margin-bottom: 15px;
 }
 
-.catalog__title {
+.title {
   font-family: 'Noto Serif';
   font-weight: bold;
   font-size: 30px;
@@ -243,6 +243,7 @@ body {
 
 .catalog__item {
   position: relative;
+  display: block;
 }
 
 .catalog__img {
@@ -277,6 +278,7 @@ body {
 
 .salons {
   background: url(../images/double-bubble-dark.png) no-repeat center;
+  background-size: 100% 100%;
 }
 
 .salons__container {
@@ -304,6 +306,7 @@ body {
   width: 66%;
   margin: 0 auto;
   padding-bottom: 60px;
+  line-height: 140%;
 }
 
 .salons__link {
@@ -316,6 +319,58 @@ body {
   margin: 0 auto;
   background: #fff;
   text-align: center;
+  text-transform: uppercase;
+}
+
+/* --------BLOG-------------------------------------------- */
+
+.blog {
+  background: #E5E5E5;
+}
+
+.blog__container {
+  padding-top: 120px;
+}
+
+.blog__articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.blog__link {
+  position: relative;
+  display: block;
+}
+
+.blog__img {
+  max-width: 100%;
+}
+
+.blog__description {
+  position: absolute;
+  left: 50%;
+  color: #fff;
+  font-size: 21px;
+  text-align: center;
+  transform: translate(-50%, -150%);
+  width: 90%;
+  line-height: 140%;
+}
+
+.blog__button {
+  display: block;
+  width: 255px;
+  color: inherit;
+  border: #fff 1px solid;
+  padding: 15px 0;
+  font-family: Gilroy;
+  font-size: 18px;
+  margin: 0 auto;
+  background: #333333;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 
