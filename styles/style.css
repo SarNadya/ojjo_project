@@ -41,6 +41,7 @@ body {
   color: #fff;
   font-family: Gilroy, sans-serif;
   max-width: 1920px;
+  min-width: 375px;
 }
 
 /* ---------------------------------------------------------- */
@@ -63,6 +64,8 @@ body {
 .header {
   position: absolute;
   width: 100%;
+  max-width: 1920px;
+  min-width: 375px;
   left: 0;
   top: 0;
   z-index: 50;
@@ -70,37 +73,35 @@ body {
 }
 
 .header__container {
-  display: flex;
-  justify-content: center;
   min-height: 52px;
   align-items: center;
   padding: 43px 0;
-  position: relative;
+  max-width: 1110px;
+  margin: 0 auto;
 }
-
-/* .header__menu {
-  margin: 0 126px 0 0;
-} */
 
 .menu__list {
   display: flex;
-  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 40px;
-}
-
-.menu__item:nth-child(3) {
-  margin-right: 444px;
-}
-
+.menu__item:nth-child(1),
+.menu__item:nth-child(2),
 .menu__item:nth-child(5) {
-  margin-right: 44px;
+  margin-right: 3.6%;
+}
+
+.menu__item:nth-child(4) {
+  margin: 0 9.2% 0 11.4%;
 }
 
 .menu__item:nth-child(6) {
-  margin-right: 29px;
+  margin-right: 4%;
+}
+
+.menu__item:nth-child(7) {
+  margin-right: 2.6%;
 }
 
 .menu__link {
@@ -108,19 +109,23 @@ body {
 }
 
 .search__img {
-  margin-right: 16px;
+  margin-right: 4px;
 }
 
 .search__input {
   background: inherit;
   color: inherit;
-  width: 41px;
+  width: 56px;
   height: 21px;
 }
 
-.header__logo {
-  position: absolute;
-  left: 40%;
+.search__input::placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+
+.header__hidden {
+  display: none;
 }
 
 /* ------MAIN-------------------------------------------- */
@@ -214,7 +219,6 @@ body {
 }
 
 .catalog__list-item {
-  /* position: relative; */
   text-transform: uppercase;
   font-size: 18px;
   color: #333333;
@@ -252,7 +256,6 @@ body {
 
 .catalog__name {
   position: absolute;
-  /* top: 222px; */
   left: 50%;
   color: #fff;
   font-size: 24px;
@@ -260,19 +263,6 @@ body {
   text-transform: uppercase;
   transform: translate(-50%, -300%);
 }
-
-/* .catalog__list-link::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #faf8f8;
-  z-index: 5;
-  border: 1px solid #D6D6D6;
-} */
 
 /* ------SALONS------------------------------------------- */
 
@@ -562,4 +552,356 @@ body {
 .bottom__item:last-child {
   font-weight: 600;
   border-bottom: 1px solid #333333;
+}
+
+/* ------АДАПТИВ--------------------------------------------- */
+
+@media (max-width: 1590px) {
+  .subscription__wrap {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .footer__title {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 1470px) {
+  .header__container {
+    max-width: 1000px;
+  }
+
+  .menu__item:nth-child(4) {
+    margin: 0 5.2% 0 7.4%;
+  }
+
+  .header__img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1420px) {
+  .container {
+    margin: 0 10%;
+  }
+
+  .intro__wrap {
+    margin-bottom: 80px;
+  }
+
+  .subscription__wrap {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1265px) {
+  .menu__item:nth-child(4) {
+    margin: 0 5.2% 0 7.4%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .intro {
+    height: 785px;
+  }
+
+  .intro__wrap {
+    margin-bottom: 0;
+  }
+  
+  .intro__bottom {
+    display: none;
+  }
+
+  .catalog__container {
+    padding: 78px 0 102px 0;
+  }
+
+  .blog__container {
+    padding-top: 78px;
+  }
+
+  .media__container {
+    padding: 109px 0 111px 0;
+  }
+}
+
+@media (max-width: 1060px) {
+  .header__container {
+    max-width: 926px;
+  }
+
+  .menu__item:nth-child(4) {
+    margin: 0 3.2% 0 5.4%;
+  }
+
+  .header__img {
+    width: 80%;
+  }
+
+  .catalog__list-item {
+    font-size: 16px;
+  }
+
+  .catalog__name {
+    font-size: 20px;
+  }
+
+  .salons__subtitle {
+    font-size: 22px;
+    padding-bottom: 27px;
+  }
+
+  .subscription__wrap {
+    width: 80%;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu {
+    display: none;
+  }
+
+  .header__hidden {
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .header__hidden-logo {
+    margin-right: 48px;
+  }
+
+  .header__toggle {
+    vertical-align: sub;
+    background: none;
+  }
+}
+
+@media (max-width: 892px) {
+  .container {
+    margin: 0 5%;
+  }
+
+  .catalog__list-item {
+    font-size: 14px;
+  }
+
+  .catalog__name {
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 19px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .salons__container {
+    padding: 80px 0;
+  }
+
+  .salons__subtitle {
+    font-size: 20px;
+  }
+
+  .salons__title {
+    font-size: 26px;
+    padding-bottom: 45px;
+  }
+
+  .salons__article {
+    font-size: 16px;
+    width: 80%;
+    padding-bottom: 50px;
+  }
+
+  .salons__link {
+    font-size: 16px;
+  }
+
+  .blog__description {
+    font-size: 18px;
+  }
+
+  .blog__button {
+    font-size: 16px;
+  }
+
+  .subscription__container {
+    padding: 80px 0 100px 0;
+  }
+
+  .subscription__subtitle {
+    font-size: 19px;
+  }
+
+  .subscription__title {
+    font-size: 28px;
+    padding-bottom: 50px;
+  }
+
+  .subscription__wrap {
+    width: 90%;
+  }
+}
+
+@media (max-width: 793px) {
+  .intro {
+    background-size: cover;
+  }
+
+  .footer {
+    padding-top: 60px;
+  }
+
+  .footer__navigation {
+    flex-wrap: wrap;
+  }
+
+  .footer__column {
+    width: 40%;
+    padding-bottom: 52px;
+  }
+
+  .footer__title {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (max-width: 720px) {
+  .link {
+    font-size: 18px;
+  }
+
+  .catalog__list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .catalog__list-item {
+    padding: 15px 0;
+    width: 20%;
+    margin: 5px;
+  }
+
+  .catalog__categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .subscription__wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subscription__list {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .subscription__form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  .blog__articles {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .media__content {
+    grid-template-columns: repeat(2, 1fr);
+    background: none;
+    gap: 10px;
+  }
+
+  .bottom__list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bottom__item {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .catalog__list-item {
+    width: 120px;
+  }
+
+  .catalog__categories {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 490px) {
+  .header__hidden {
+    width: 310px;
+  }
+
+  .intro {
+    height: 640px;
+  }
+
+  .intro__title {
+    line-height: 49px;
+    padding: 332px 0 50px 0;
+  }
+
+  .salons__title {
+    line-height: 41px;
+  }
+
+  .subscription__container {
+    padding: 60px 0 60px 0;
+  }
+
+  .subscription__header {
+    padding: 0 20px;
+  }
+
+  .subscription__subtitle {
+    font-size: 16px;
+  }
+
+  .subscription__title {
+    font-size: 24px;
+    padding-bottom: 40px;
+  }
+
+  .subscription__form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer__navigation{
+    justify-content: center;
+  }
+
+  .footer__column {
+    width: 60%;
+  }
+
+  .footer__title {
+    font-size: 16px;
+  }
+
+  .footer__item {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .footer__desc {
+    font-size: 16px;
+  }
 }
