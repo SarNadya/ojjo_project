@@ -38,7 +38,7 @@
                     </form>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link __link">Вход/Регистрация</a>
+                    <a href="#modal" class="menu__link __link">Вход/Регистрация</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__link">
@@ -58,6 +58,26 @@
                   <img src="./images/toggle.png" alt="toggle" class="header__toggle-img">
                 </button>
               </div>
+            </div>
+            <a href="#x" class="overlay" id="modal"></a>
+            <div class="popup">
+              <h3 class="popup__title">Регистрация</h3>
+              <form class="popup__form" autocomplete="on">
+                <div class="popup__registration">
+                  <input type="text" class="popup__input" placeholder="Фамилия" required>
+                  <input type="text" class="popup__input" placeholder="Имя" required>
+                  <input type="text" class="popup__input" placeholder="Отчество">
+                  <input type="email" class="popup__input" placeholder="Электронная почта" required>
+                  <input type="password" class="popup__input" placeholder="Пароль" required>
+                  <input type="password" class="popup__input" placeholder="Подтвердите пароль" required>
+                </div>
+                <div class="popup__buttons">
+                  <button type="submit" class="popup__btn">Зарегистрироваться</button>
+                  <p class="popup__text">Есть аккаунт?</p>
+                  <button class="popup__btn">Войти</button>
+                </div>
+              </form>
+              <a class="close"title="Закрыть" href="#close"></a>
             </div>
           </header>
 
