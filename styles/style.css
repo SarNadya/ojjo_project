@@ -86,6 +86,10 @@ body {
   align-items: center;
 }
 
+.menu__item {
+  position: relative;
+}
+
 .menu__item:nth-child(1),
 .menu__item:nth-child(2),
 .menu__item:nth-child(5) {
@@ -108,8 +112,28 @@ body {
   color: inherit;
 }
 
+.__link::after,
+.search::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  transition: all .8s ease 0s;
+  margin-top: 5px;
+  left: 0;
+}
+
+.__link:hover::after,
+.search:hover::after {
+  width: 100%;
+}
+
 .search__img {
   margin-right: 4px;
+  vertical-align: sub;
 }
 
 .search__input {
@@ -161,9 +185,17 @@ body {
   padding: 15px 0;
   font-family: Gilroy;
   font-size: 18px;
+  letter-spacing: 0.1em;
   margin: 0 auto;
   background: #333333;
   text-align: center;
+  transition: all .8s ease 0s;
+}
+
+.intro__link:hover {
+  background: #fff;
+  color: #333333;
+  border-color: #333333;
 }
 
 .intro__bottom {
@@ -227,6 +259,7 @@ body {
   width: 15%;
   text-align: center;
   background: #F9F9F9;
+  transition: all .6s ease 0s;
 }
 
 .catalog__list-item:hover {
@@ -248,6 +281,11 @@ body {
 .catalog__item {
   position: relative;
   display: block;
+  transition: all .8s ease 0s;
+}
+
+.catalog__item:hover {
+  opacity: .6;
 }
 
 .catalog__img {
@@ -306,10 +344,18 @@ body {
   border: #333333 1px solid;
   padding: 15px 0;
   font-size: 18px;
+  letter-spacing: 0.1em;
   margin: 0 auto;
   background: #fff;
   text-align: center;
   text-transform: uppercase;
+  transition: all .8s ease 0s;
+}
+
+.salons__link:hover {
+  background: #333333;
+  color:#fff;
+  border-color: #fff;
 }
 
 /* --------BLOG-------------------------------------------- */
@@ -332,6 +378,11 @@ body {
 .blog__link {
   position: relative;
   display: block;
+  transition: all .8s ease 0s;
+}
+
+.blog__link:hover {
+  opacity: .6;
 }
 
 .blog__img {
@@ -357,10 +408,18 @@ body {
   padding: 15px 0;
   font-family: Gilroy;
   font-size: 18px;
+  letter-spacing: 0.1em;
   margin: 0 auto;
   background: #333333;
   text-align: center;
   text-transform: uppercase;
+  transition: all .8s ease 0s;
+}
+
+.blog__button:hover {
+  background: #fff;
+  color: #333333;
+  border-color: #333333;
 }
 
 /* ------MEDIA-------------------------------------------- */
@@ -469,6 +528,15 @@ body {
   width: 40%;
   height: 45px;
   color: #fff;
+  text-transform: uppercase;
+  transition: all .8s ease 0s;
+}
+
+.subscription__button:hover {
+  background: #fff;
+  color: #333333;
+  border-color: #333333;
+  cursor: pointer;
 }
 
 /* ------FOOTER------------------------------------------- */
@@ -511,6 +579,14 @@ body {
 
 .footer__desc {
   margin-bottom: 21px;
+}
+
+.social__img {
+  transition: all .8s ease 0s;
+}
+
+.social__img:hover {
+  transform: scale(1.5);
 }
 
 .footer__contact:not(:last-child) {
